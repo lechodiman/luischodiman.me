@@ -1,49 +1,51 @@
 'use strict';
 
 module.exports = {
-  url: 'https://lumen.netlify.com',
+  url: 'https://luischodiman.me',
   pathPrefix: '/',
-  title: 'Blog by John Doe',
-  subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
-  copyright: '© All rights reserved.',
+  title: 'Luis Chodiman | Blog',
+  subtitle:
+    'Blog personal para compartir cosas interesantes en el mundo del desarrollo.',
+  copyright: '© Todos los derechos reservados.',
   disqusShortname: '',
   postsPerPage: 4,
   googleAnalyticsId: 'UA-73379983-2',
   useKatex: false,
   menu: [
     {
-      label: 'Articles',
+      label: 'Artículos',
       path: '/'
     },
     {
-      label: 'About me',
+      label: 'Acerca de mí',
       path: '/pages/about'
     },
     {
-      label: 'Contact me',
+      label: 'Contáctame',
       path: '/pages/contacts'
     }
   ],
   author: {
-    name: 'John Doe',
+    name: 'Luis Chodiman',
     photo: '/photo.jpg',
-    bio: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+    bio:
+      'Estudiante de Ingeniería Civil de Industrias, diploma en Computación en la UC. Fan del desarrollo web, la música y el deporte.',
     contacts: {
-      email: '',
+      email: 'lechodiman@uc.cl',
       facebook: '#',
       telegram: '#',
       twitter: '#',
-      github: '#',
+      github: 'lechodiman',
       rss: '',
       vkontakte: '',
-      linkedin: '#',
+      linkedin: 'luis-chodiman-herrera-b54685144/',
       instagram: '#',
       line: '',
       gitlab: '',
       weibo: '',
       codepen: '',
       youtube: '',
-      soundcloud: '',
+      soundcloud: ''
     }
   }
 };
