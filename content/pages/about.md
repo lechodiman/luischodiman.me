@@ -1,13 +1,13 @@
 ---
-title: "About me"
-template: "page"
-socialImage: "/media/image-2.jpg"
+title: 'Acerca de mí'
+template: 'page'
+socialImage: '/media/image-2.jpg'
 ---
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
+Siempre me ha apasionado enseñar y compartir conocimiento, porque creo que es un paso fundamental para consolidar el aprendizaje propio.
 
-![Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.](/media/image-2.jpg)
+Es por ello que quiero usar este blog como medio para compartir mis conocimientos, aprendizajes y lecciones aprendidas a medida que avance en mi carrera como ingeniero.
 
-*Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.*
+Particularmente, quiero entregar herramientas que me hubiese gustado tener antes de enfrentar algún problema o etapa en la carrera.
 
-Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus
+Adicionalmente, pretendo compartir tecnologías, prácticas y metodologías que aprenda y sienta que necesite compartir con el mundo.
