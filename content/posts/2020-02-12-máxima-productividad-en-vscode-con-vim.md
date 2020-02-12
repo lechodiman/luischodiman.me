@@ -12,28 +12,28 @@ tags:
   - vscode
   - vim
 ---
+
 **Visual Studio Code** es mi editor de preferencia actualmente, y por varios motivos. El más importante es la capacidad de añadir funcionalidades con extensiones de una manera muy intuitiva.
 
-**Vim** es fantástico. Es un editor de texto plano con cualidades de otro mundo. Permite ser configurado a gusto en muchos aspectos pero para mi gusto carece de _features_ importantes con un _debugger_.
+**Vim** es fantástico. Es un editor de texto plano con cualidades de otro mundo. Permite ser configurado a gusto en muchos aspectos pero para mi gusto carece de _features_ importantes como un _debugger_.
 
 La combinación de ambos es **absolutamente maravillosa**. Tenemos lo mejor de los dos mundos: cualidades de IDE (debugger, terminal integrado) de VSCode y combinaciones de _keystrokes_ eficientes de Vim.
 
-En los próximos minutos te daré lo esencial para comenzar a explorar Vim en VSCode.
+A continuación te daré lo esencial para comenzar a explorar Vim en VSCode.
 
 ¿Qué cosas veremos en este artículo?
 
-- [Máxima productividad en VSCode con Vim](#m%c3%a1xima-productividad-en-vscode-con-vim)
-  - [Vim](#vim)
-  - [Razón de usar Vim](#raz%c3%b3n-de-usar-vim)
-  - [Instalación en VSCode](#instalaci%c3%b3n-en-vscode)
-  - [Configuración inicial](#configuraci%c3%b3n-inicial)
-  - [Modos en Vim](#modos-en-vim)
-  - [Movimientos básicos](#movimientos-b%c3%a1sicos)
-    - [Movimiento por caracter](#movimiento-por-caracter)
-    - [Movimiento horizontal](#movimiento-horizontal)
-    - [Movimiento vertical](#movimiento-vertical)
-  - [Conclusión](#conclusi%c3%b3n)
-  - [Recursos Adicionales](#recursos-adicionales)
+- [Vim](#vim)
+- [Razón de usar Vim](#raz%c3%b3n-de-usar-vim)
+- [Instalación en VSCode](#instalaci%c3%b3n-en-vscode)
+- [Configuración inicial](#configuraci%c3%b3n-inicial)
+- [Modos en Vim](#modos-en-vim)
+- [Movimientos básicos](#movimientos-b%c3%a1sicos)
+  - [Movimiento por caracter](#movimiento-por-caracter)
+  - [Movimiento horizontal](#movimiento-horizontal)
+  - [Movimiento vertical](#movimiento-vertical)
+- [Conclusión](#conclusi%c3%b3n)
+- [Recursos Adicionales](#recursos-adicionales)
 
 En próximos artículos veremos características un poco más avanzadas pero que marcan un antes y un después en la productividad al momento de desarrollar.
 
@@ -54,7 +54,7 @@ Personalmente, no me considero un usuario avanzado y aún sigo aprendiendo cosas
 - Instalar la primera extension que aparece
 - Voilá
 
-![](images/vim-marketplace.png)
+![VSCode Vim en el marketplace](images/vim-marketplace.png)
 
 Puede ser que después de instalar la extensión debas reiniciar el editor para que esta tome efecto.
 
@@ -70,7 +70,9 @@ Esto es porque en Vim hay varios **keystrokes** que están reservados. Por ejemp
 
 Para mí esto fue sorpresivo porque implicaba borrar varios atajos que ya estaban registrados en mi memoria muscular. Pero, todos estos cambios tienen una razón de ser, y a fin de cuentas, los atajos nativos de Vim para copiar, pegar, eliminar lineas, etc, son más eficientes que los que ya usaba.
 
-Si quieres configurar qué combinaciones quieres mantener puedes modificar el campo `"vim.handleKeys"` de tu `settings.json`. Por ejemplo, yo aún mantengo `CTRL-F` para buscar:
+Si quieres configurar qué combinaciones quieres mantener puedes modificar el campo `"vim.handleKeys"` de tu `settings.json`. Para modificar este archivo, puedes abrir la paleta de comandos con `CTRL-SHIFT-P` o `CMD-SHIFT-P` y escribir 'Open Settings (JSON)'.
+
+Por ejemplo, yo aún mantengo `CTRL-F` para buscar:
 
 ```json
 "vim.handleKeys": {
@@ -84,7 +86,7 @@ Una vez que tengas la extensión configurada, hay que hablar de la principal dif
 
 Si abres un archivo y ves la barra inferior deberías ver algo como:
 
-![](images/normal-mode.png)
+![VSCode Status Bar en Normal Mode](images/normal-mode.png)
 
 En la barra inferior (status bar) podrás ver `--NORMAL--`, lo que indica que estás en Normal Mode.
 
@@ -104,7 +106,11 @@ Para mover tu cursor con vim, se utilizan **motions**. Estas son teclas o combin
 
 Lo primero que todo el mundo aprende al iniciarse en Vim es a posicionar las manos en el teclado.
 
-Vim está optimizado para [_touch typing_](https://en.wikipedia.org/wiki/Touch_typing), que básicamente, es la forma **ergonómica y eficiente** de escribir. Para ello, lo primero es posicionar los dedos de la mano izquierda en `asdf` y los de la mano derecha en `jklñ` (si usas teclado latino americano) o `jkl;` (si usas teclado estadounidense). Esto permitirá, que las teclas más comunes estén más cerca de nuestros dedos y las menos usadas, estén más lejos.
+Vim está optimizado para [_touch typing_](https://en.wikipedia.org/wiki/Touch_typing), que básicamente, es la forma **ergonómica y eficiente** de escribir. Para ello, lo primero es posicionar los dedos de la mano izquierda en `asdf` y los de la mano derecha en `jklñ` (si usas teclado latino americano) o `jkl;` (si usas teclado estadounidense).
+
+Para esto solo debes preocuparte que tus dedos indices estén sobre las teclas `f` y `j`, la cuales, convenientemente tienen una pequeña marca para poder sentir que tus dedos están en las teclas correctas.
+
+Con esto las teclas más comunes estarán más cerca de nuestros dedos y las menos usadas, estén más lejos.
 
 Esta posición nos permitirá movernos con naturalidad usando:
 
