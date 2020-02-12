@@ -2,7 +2,7 @@
 template: post
 title: 'JS: Some y Every para un código más limpio'
 slug: some-y-every-para-un-codigo-mas-limpio
-draft: true
+draft: false
 date: 2020-02-12T18:37:08.456Z
 description: >-
   Los métodos 'some' y 'every' en Javascript no son tan conocidos como map,
