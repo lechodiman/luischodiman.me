@@ -53,7 +53,7 @@ for (let i; i <= apiResponses.length; i++) {
 console.log(error); // true
 ```
 
-La cierto es que esto es un problema, por que no nos interesa para nada qué es `i`. Además, estamos usando un enfoque imperativo, en vez de uno declarativo. Si quieres saber más de esto te dejo un artículo: [Imperativo vs declarativo](https://dzone.com/articles/imperative-vs-declarative-javascript)
+Lo cierto es que esto es un problema, por que no nos interesa para nada qué es `i`. Además, estamos usando un enfoque imperativo, en vez de uno declarativo. Si quieres saber más de esto te dejo un artículo: [Imperativo vs declarativo](https://dzone.com/articles/imperative-vs-declarative-javascript)
 
 ### Some al rescate
 
