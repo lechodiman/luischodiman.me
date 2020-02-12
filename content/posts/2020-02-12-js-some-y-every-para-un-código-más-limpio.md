@@ -13,6 +13,7 @@ tags:
   - functional
   - point-free
 ---
+
 En este artículo quiero compartir dos métodos de _arrays_ que van a ayudarte a tener un código más ordenado y predecible.
 
 Me refiero a los métodos: `some` y `every`. Estos métodos fueron introducidos en `ES5` junto con los más populares `map`, `filter` y `reduce`.
@@ -66,7 +67,7 @@ console.log(error); // true
 
 Muchos más corto, y con menor probabilidad a errores de humano!
 
-Esto se puede mejorar aún más pasando el _callback_ a la función some como una referencia a otro función:
+Esto se puede mejorar aún más pasando el _callback_ a la función `some` como una referencia a otra función:
 
 ```js
 const hasServerError = response => response.statusCode === 500;
