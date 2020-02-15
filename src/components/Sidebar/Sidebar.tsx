@@ -1,17 +1,16 @@
-// @flow strict
 import React from 'react';
 import Author from './Author';
 import Contacts from './Contacts';
 import Copyright from './Copyright';
 import Menu from './Menu';
-import styles from './Sidebar.module.scss';
+import * as styles from './Sidebar.module.scss';
 import { useSiteMetadata } from '../../hooks';
 
-type Props = {
-  isIndex?: boolean,
-};
+interface Props {
+  isIndex?: boolean;
+}
 
-const Sidebar = ({ isIndex }: Props) => {
+const Sidebar: React.FC<Props> = ({ isIndex }) => {
   const { author, copyright, menu } = useSiteMetadata();
 
   return (
