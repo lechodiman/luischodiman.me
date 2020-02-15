@@ -1,13 +1,12 @@
-// @flow strict
 import React from 'react';
 import moment from 'moment';
 import styles from './Meta.module.scss';
 
-type Props = {
-  date: string
-};
+interface Props {
+  date: string;
+}
 
-const Meta = ({ date }: Props) => (
+const Meta: React.FC<Props> = ({ date }) => (
   <div className={styles['meta']}>
     <p className={styles['meta__date']}>
       Publicado el {moment(date).format('D MMM YYYY')}
