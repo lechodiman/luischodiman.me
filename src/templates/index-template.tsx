@@ -1,4 +1,3 @@
-// @flow strict
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
@@ -7,14 +6,14 @@ import Feed from '../components/Feed';
 import Page from '../components/Page';
 import Pagination from '../components/Pagination';
 import { useSiteMetadata } from '../hooks';
-import type { PageContext, AllMarkdownRemark } from '../types';
+import { AllMarkdownRemark, PageContext } from '../types';
 
 type Props = {
-  data: AllMarkdownRemark,
-  pageContext: PageContext
+  data: AllMarkdownRemark;
+  pageContext: PageContext;
 };
 
-const IndexTemplate = ({ data, pageContext }: Props) => {
+const IndexTemplate: React.FC<Props> = ({ data, pageContext }) => {
   const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
 
   const {
@@ -25,9 +24,9 @@ const IndexTemplate = ({ data, pageContext }: Props) => {
     nextPagePath
   } = pageContext;
 
-
   const { edges } = data.allMarkdownRemark;
-  const pageTitle = currentPage > 0 ? `Posts - Page ${currentPage} - ${siteTitle}` : siteTitle;
+  const pageTitle =
+    currentPage > 0 ? `Posts - Page ${currentPage} - ${siteTitle}` : siteTitle;
 
   return (
     <Layout title={pageTitle} description={siteSubtitle}>
@@ -48,11 +47,11 @@ const IndexTemplate = ({ data, pageContext }: Props) => {
 export const query = graphql`
   query IndexTemplate($postsLimit: Int!, $postsOffset: Int!) {
     allMarkdownRemark(
-        limit: $postsLimit,
-        skip: $postsOffset,
-        filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } },
-        sort: { order: DESC, fields: [frontmatter___date] }
-      ){
+      limit: $postsLimit
+      skip: $postsOffset
+      filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
       edges {
         node {
           fields {
