@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = {
+export default {
   pageContext: {
     tag: 'test',
     category: 'test',
