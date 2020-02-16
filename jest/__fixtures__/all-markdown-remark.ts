@@ -1,4 +1,6 @@
-export default {
+import { AllMarkdownRemark } from '../../src/types';
+
+const allMarkdownRemark = {
   allMarkdownRemark: {
     group: [
       {
@@ -42,3 +44,5 @@ export default {
     ]
   }
 };
+
+export default allMarkdownRemark;

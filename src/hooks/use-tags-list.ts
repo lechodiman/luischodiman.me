@@ -18,6 +18,8 @@ const useTagsList = () => {
     `
   );
 
+  console.log(allMarkdownRemark);
+
   return allMarkdownRemark.group;
 };
 

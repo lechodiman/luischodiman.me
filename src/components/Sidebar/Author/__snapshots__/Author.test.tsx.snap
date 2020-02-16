@@ -1,33 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Author renders correctly 1`] = `
-<div
-  className="author"
->
+<div>
   <a
     href="/"
   >
     <img
       alt="test"
-      className="author__photo"
       height="75"
       src="/photo.jpg"
       width="75"
     />
   </a>
-  <h2
-    className="author__title"
-  >
+  <h2>
     <a
-      className="author__title-link"
       href="/"
     >
       test
     </a>
   </h2>
-  <p
-    className="author__subtitle"
-  >
+  <p>
     test
   </p>
 </div>

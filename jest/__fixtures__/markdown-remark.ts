@@ -1,4 +1,6 @@
-export default {
+import { MarkdownRemark } from '../../src/types';
+
+const markdownRemark: { markdownRemark: MarkdownRemark } = {
   markdownRemark: {
     id: 'test-123',
     html: '<p>test</p>',
@@ -13,3 +15,5 @@ export default {
     }
   }
 };
+
+export default markdownRemark;

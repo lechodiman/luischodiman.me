@@ -8,7 +8,7 @@ import { useSiteMetadata, useTagsList } from '../hooks';
 
 const TagsListTemplate: React.FC = () => {
   const { title, subtitle } = useSiteMetadata();
-  const tags = useTagsList();
+  const tags: { fieldValue: string; totalCount: number }[] = useTagsList();
 
   return (
     <Layout title={`Tags - ${title}`} description={subtitle}>

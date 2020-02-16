@@ -1,7 +1,8 @@
-import React from 'react';
-import gatsby from 'gatsby';
+const React = require('react');
 
-export default {
+const gatsby = jest.requireActual('gatsby');
+
+module.exports = {
   ...gatsby,
   graphql: jest.fn(),
   Link: jest

@@ -1,42 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TagsListTemplate renders correctly 1`] = `
+exports[`CategoryTemplate renders correctly 1`] = `
 <div
   className="layout"
 >
-  <div
-    className="sidebar"
-  >
-    <div
-      className="sidebar__inner"
-    >
-      <div
-        className="author"
-      >
+  <div>
+    <div>
+      <div>
         <a
           href="/"
         >
           <img
             alt="Test name"
-            className="author__photo"
             height="75"
             src="/test.jpg"
             width="75"
           />
         </a>
-        <h2
-          className="author__title"
-        >
+        <h2>
           <a
-            className="author__title-link"
             href="/"
           >
             Test name
           </a>
         </h2>
-        <p
-          className="author__subtitle"
-        >
+        <p>
           Test bio
         </p>
       </div>
@@ -78,17 +66,10 @@ exports[`TagsListTemplate renders correctly 1`] = `
           </li>
         </ul>
       </nav>
-      <div
-        className="contacts"
-      >
-        <ul
-          className="contacts__list"
-        >
-          <li
-            className="contacts__list-item"
-          >
+      <div>
+        <ul>
+          <li>
             <a
-              className="contacts__list-item-link"
               href="mailto:#"
               rel="noopener noreferrer"
               target="_blank"
@@ -106,11 +87,8 @@ exports[`TagsListTemplate renders correctly 1`] = `
               </svg>
             </a>
           </li>
-          <li
-            className="contacts__list-item"
-          >
+          <li>
             <a
-              className="contacts__list-item-link"
               href="https://t.me/#"
               rel="noopener noreferrer"
               target="_blank"
@@ -128,11 +106,8 @@ exports[`TagsListTemplate renders correctly 1`] = `
               </svg>
             </a>
           </li>
-          <li
-            className="contacts__list-item"
-          >
+          <li>
             <a
-              className="contacts__list-item-link"
               href="https://www.twitter.com/#"
               rel="noopener noreferrer"
               target="_blank"
@@ -150,11 +125,8 @@ exports[`TagsListTemplate renders correctly 1`] = `
               </svg>
             </a>
           </li>
-          <li
-            className="contacts__list-item"
-          >
+          <li>
             <a
-              className="contacts__list-item-link"
               href="https://github.com/#"
               rel="noopener noreferrer"
               target="_blank"
@@ -172,11 +144,8 @@ exports[`TagsListTemplate renders correctly 1`] = `
               </svg>
             </a>
           </li>
-          <li
-            className="contacts__list-item"
-          >
+          <li>
             <a
-              className="contacts__list-item-link"
               href="#"
               rel="noopener noreferrer"
               target="_blank"
@@ -194,11 +163,8 @@ exports[`TagsListTemplate renders correctly 1`] = `
               </svg>
             </a>
           </li>
-          <li
-            className="contacts__list-item"
-          >
+          <li>
             <a
-              className="contacts__list-item-link"
               href="https://vk.com/#"
               rel="noopener noreferrer"
               target="_blank"
@@ -234,33 +200,103 @@ exports[`TagsListTemplate renders correctly 1`] = `
       <h1
         className="page__title"
       >
-        Tags
+        test
       </h1>
       <div
         className="page__body"
       >
-        <ul>
-          <li>
-            <a
-              href="/tag/test-0/"
-            >
+        <div>
+          <div>
+            <div>
+              <time
+                dateTime="September 1, 2016"
+              >
+                September 2016
+              </time>
+              <span />
+              <span>
+                <a
+                  href="/test"
+                >
+                  test
+                </a>
+              </span>
+            </div>
+            <h2>
+              <a
+                href="/test_0"
+              >
+                test_0
+              </a>
+            </h2>
+            <p>
               test_0
-               (
-              1
-              )
-            </a>
-          </li>
-          <li>
+            </p>
             <a
-              href="/tag/test-1/"
+              href="/test_0"
             >
-              test_1
-               (
-              2
-              )
+              Leer
             </a>
-          </li>
-        </ul>
+          </div>
+          <div>
+            <div>
+              <time
+                dateTime="September 1, 2016"
+              >
+                September 2016
+              </time>
+              <span />
+              <span>
+                <a
+                  href="/test"
+                >
+                  test
+                </a>
+              </span>
+            </div>
+            <h2>
+              <a
+                href="/test_1"
+              >
+                test_1
+              </a>
+            </h2>
+            <p>
+              test_1
+            </p>
+            <a
+              href="/test_1"
+            >
+              Leer
+            </a>
+          </div>
+        </div>
+        <div
+          className="pagination"
+        >
+          <div
+            className="pagination__prev"
+          >
+            <a
+              className="pagination__prev-link"
+              href="/page/1"
+              rel="prev"
+            >
+              ← ANTERIOR
+            </a>
+          </div>
+          <div
+            className="pagination__next"
+          >
+            <a
+              className="pagination__next-link"
+              href="/page/3"
+              rel="next"
+            >
+              → SIGUIENTE
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>

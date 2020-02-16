@@ -11,7 +11,7 @@ exports[`PostTemplate renders correctly 1`] = `
       className="post__home-button"
       href="/"
     >
-      All Articles
+      Artículos
     </a>
     <div
       className="post__content"
@@ -43,7 +43,7 @@ exports[`PostTemplate renders correctly 1`] = `
         <p
           className="meta__date"
         >
-          Published 
+          Publicado el 
           1 Sep 2016
         </p>
       </div>
@@ -84,14 +84,14 @@ exports[`PostTemplate renders correctly 1`] = `
           Test bio
           <a
             className="author__bio-twitter"
-            href="https://www.twitter.com/#"
+            href="https://www.linkedin.com/in/undefined"
             rel="noopener noreferrer"
             target="_blank"
           >
             <strong>
               Test name
             </strong>
-             on Twitter
+             en LinkedIn
           </a>
         </p>
       </div>

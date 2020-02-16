@@ -1,42 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CategoryTemplate renders correctly 1`] = `
+exports[`IndexTemplate renders correctly 1`] = `
 <div
   className="layout"
 >
-  <div
-    className="sidebar"
-  >
-    <div
-      className="sidebar__inner"
-    >
-      <div
-        className="author"
-      >
+  <div>
+    <div>
+      <div>
         <a
           href="/"
         >
           <img
             alt="Test name"
-            className="author__photo"
             height="75"
             src="/test.jpg"
             width="75"
           />
         </a>
-        <h2
-          className="author__title"
-        >
+        <h1>
           <a
-            className="author__title-link"
             href="/"
           >
             Test name
           </a>
-        </h2>
-        <p
-          className="author__subtitle"
-        >
+        </h1>
+        <p>
           Test bio
         </p>
       </div>
@@ -78,17 +66,10 @@ exports[`CategoryTemplate renders correctly 1`] = `
           </li>
         </ul>
       </nav>
-      <div
-        className="contacts"
-      >
-        <ul
-          className="contacts__list"
-        >
-          <li
-            className="contacts__list-item"
-          >
+      <div>
+        <ul>
+          <li>
             <a
-              className="contacts__list-item-link"
               href="mailto:#"
               rel="noopener noreferrer"
               target="_blank"
@@ -106,11 +87,8 @@ exports[`CategoryTemplate renders correctly 1`] = `
               </svg>
             </a>
           </li>
-          <li
-            className="contacts__list-item"
-          >
+          <li>
             <a
-              className="contacts__list-item-link"
               href="https://t.me/#"
               rel="noopener noreferrer"
               target="_blank"
@@ -128,11 +106,8 @@ exports[`CategoryTemplate renders correctly 1`] = `
               </svg>
             </a>
           </li>
-          <li
-            className="contacts__list-item"
-          >
+          <li>
             <a
-              className="contacts__list-item-link"
               href="https://www.twitter.com/#"
               rel="noopener noreferrer"
               target="_blank"
@@ -150,11 +125,8 @@ exports[`CategoryTemplate renders correctly 1`] = `
               </svg>
             </a>
           </li>
-          <li
-            className="contacts__list-item"
-          >
+          <li>
             <a
-              className="contacts__list-item-link"
               href="https://github.com/#"
               rel="noopener noreferrer"
               target="_blank"
@@ -172,11 +144,8 @@ exports[`CategoryTemplate renders correctly 1`] = `
               </svg>
             </a>
           </li>
-          <li
-            className="contacts__list-item"
-          >
+          <li>
             <a
-              className="contacts__list-item-link"
               href="#"
               rel="noopener noreferrer"
               target="_blank"
@@ -194,11 +163,8 @@ exports[`CategoryTemplate renders correctly 1`] = `
               </svg>
             </a>
           </li>
-          <li
-            className="contacts__list-item"
-          >
+          <li>
             <a
-              className="contacts__list-item-link"
               href="https://vk.com/#"
               rel="noopener noreferrer"
               target="_blank"
@@ -231,111 +197,72 @@ exports[`CategoryTemplate renders correctly 1`] = `
     <div
       className="page__inner"
     >
-      <h1
-        className="page__title"
-      >
-        test
-      </h1>
       <div
         className="page__body"
       >
-        <div
-          className="feed"
-        >
-          <div
-            className="feed__item"
-          >
-            <div
-              className="feed__item-meta"
-            >
+        <div>
+          <div>
+            <div>
               <time
-                className="feed__item-meta-time"
                 dateTime="September 1, 2016"
               >
                 September 2016
               </time>
-              <span
-                className="feed__item-meta-divider"
-              />
-              <span
-                className="feed__item-meta-category"
-              >
+              <span />
+              <span>
                 <a
-                  className="feed__item-meta-category-link"
                   href="/test"
                 >
                   test
                 </a>
               </span>
             </div>
-            <h2
-              className="feed__item-title"
-            >
+            <h2>
               <a
-                className="feed__item-title-link"
                 href="/test_0"
               >
                 test_0
               </a>
             </h2>
-            <p
-              className="feed__item-description"
-            >
+            <p>
               test_0
             </p>
             <a
-              className="feed__item-readmore"
               href="/test_0"
             >
-              Read
+              Leer
             </a>
           </div>
-          <div
-            className="feed__item"
-          >
-            <div
-              className="feed__item-meta"
-            >
+          <div>
+            <div>
               <time
-                className="feed__item-meta-time"
                 dateTime="September 1, 2016"
               >
                 September 2016
               </time>
-              <span
-                className="feed__item-meta-divider"
-              />
-              <span
-                className="feed__item-meta-category"
-              >
+              <span />
+              <span>
                 <a
-                  className="feed__item-meta-category-link"
                   href="/test"
                 >
                   test
                 </a>
               </span>
             </div>
-            <h2
-              className="feed__item-title"
-            >
+            <h2>
               <a
-                className="feed__item-title-link"
                 href="/test_1"
               >
                 test_1
               </a>
             </h2>
-            <p
-              className="feed__item-description"
-            >
+            <p>
               test_1
             </p>
             <a
-              className="feed__item-readmore"
               href="/test_1"
             >
-              Read
+              Leer
             </a>
           </div>
         </div>
@@ -350,7 +277,7 @@ exports[`CategoryTemplate renders correctly 1`] = `
               href="/page/1"
               rel="prev"
             >
-              ← PREV
+              ← ANTERIOR
             </a>
           </div>
           <div
@@ -361,7 +288,7 @@ exports[`CategoryTemplate renders correctly 1`] = `
               href="/page/3"
               rel="next"
             >
-              → NEXT
+              → SIGUIENTE
             </a>
           </div>
         </div>

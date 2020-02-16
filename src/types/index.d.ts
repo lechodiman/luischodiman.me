@@ -22,7 +22,7 @@ type PageContext = {
 
 type Node = {
   fields: {
-    slug: string;
+    slug?: string;
     categorySlug?: string;
     tagSlugs?: string[];
   };
@@ -34,24 +34,24 @@ type Node = {
     title: string;
     socialImage?: string;
   };
-  html: string;
-  id: string;
+  html?: string;
+  id?: string;
 };
 
 type Edge = {
   node: Node;
 };
 
-type Edges = Array<Edge>;
+type Edges = Edge[];
 
 type AllMarkdownRemark = {
   allMarkdownRemark: {
+    group: {
+      fieldValue: string;
+      totalCount: number;
+    }[];
     edges: Edges;
   };
-  group: {
-    fieldValue: string;
-    totalCount: number;
-  }[];
 };
 
 type MarkdownRemark = Node;
