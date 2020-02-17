@@ -1,27 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Sidebar renders correctly 1`] = `
-<div>
-  <div>
-    <div>
+<div
+  className="sidebar"
+>
+  <div
+    className="sidebar__inner"
+  >
+    <div
+      className="author"
+    >
       <a
         href="/"
       >
         <img
           alt="Test name"
+          className="author__photo"
           height="75"
           src="/test.jpg"
           width="75"
         />
       </a>
-      <h1>
+      <h1
+        className="author__title"
+      >
         <a
+          className="author__title-link"
           href="/"
         >
           Test name
         </a>
       </h1>
-      <p>
+      <p
+        className="author__subtitle"
+      >
         Test bio
       </p>
     </div>
@@ -63,10 +75,17 @@ exports[`Sidebar renders correctly 1`] = `
         </li>
       </ul>
     </nav>
-    <div>
-      <ul>
-        <li>
+    <div
+      className="contacts"
+    >
+      <ul
+        className="contacts__list"
+      >
+        <li
+          className="contacts__list-item"
+        >
           <a
+            className="contacts__list-item-link"
             href="mailto:#"
             rel="noopener noreferrer"
             target="_blank"
@@ -84,8 +103,11 @@ exports[`Sidebar renders correctly 1`] = `
             </svg>
           </a>
         </li>
-        <li>
+        <li
+          className="contacts__list-item"
+        >
           <a
+            className="contacts__list-item-link"
             href="https://t.me/#"
             rel="noopener noreferrer"
             target="_blank"
@@ -103,8 +125,11 @@ exports[`Sidebar renders correctly 1`] = `
             </svg>
           </a>
         </li>
-        <li>
+        <li
+          className="contacts__list-item"
+        >
           <a
+            className="contacts__list-item-link"
             href="https://www.twitter.com/#"
             rel="noopener noreferrer"
             target="_blank"
@@ -122,8 +147,11 @@ exports[`Sidebar renders correctly 1`] = `
             </svg>
           </a>
         </li>
-        <li>
+        <li
+          className="contacts__list-item"
+        >
           <a
+            className="contacts__list-item-link"
             href="https://github.com/#"
             rel="noopener noreferrer"
             target="_blank"
@@ -141,8 +169,11 @@ exports[`Sidebar renders correctly 1`] = `
             </svg>
           </a>
         </li>
-        <li>
+        <li
+          className="contacts__list-item"
+        >
           <a
+            className="contacts__list-item-link"
             href="#"
             rel="noopener noreferrer"
             target="_blank"
@@ -160,8 +191,11 @@ exports[`Sidebar renders correctly 1`] = `
             </svg>
           </a>
         </li>
-        <li>
+        <li
+          className="contacts__list-item"
+        >
           <a
+            className="contacts__list-item-link"
             href="https://vk.com/#"
             rel="noopener noreferrer"
             target="_blank"

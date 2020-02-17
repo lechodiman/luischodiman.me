@@ -1,6 +1,6 @@
 import React from 'react';
 import { withPrefix, Link } from 'gatsby';
-import * as styles from './Author.module.scss';
+import styles from './Author.module.scss';
 
 interface Props {
   author: {

@@ -22,7 +22,7 @@ type PageContext = {
 
 type Node = {
   fields: {
-    slug?: string;
+    slug: string;
     categorySlug?: string;
     tagSlugs?: string[];
   };

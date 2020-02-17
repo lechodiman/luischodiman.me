@@ -7,14 +7,14 @@ import { RenderCallback } from '../../types';
 
 describe('Sidebar', () => {
   beforeEach(() => {
-    StaticQuery.mockImplementationOnce(
-      ({ render }: RenderCallback) => render(siteMetadata),
-      useStaticQuery.mockReturnValue(siteMetadata)
+    (StaticQuery as jest.Mock).mockImplementationOnce(
+      ({ render }: RenderCallback) => render(siteMetadata)
     );
+    (useStaticQuery as jest.Mock).mockReturnValue(siteMetadata);
   });
 
   const props = {
-    isIndex: true
+    isIndex: true,
   };
 
   it('renders correctly', () => {

@@ -1,14 +1,14 @@
 import React from 'react';
 import moment from 'moment';
 import { Link } from 'gatsby';
-import * as styles from './Feed.module.scss';
+import styles from './Feed.module.scss';
 import { Edges } from '../../types';
 
 interface Props {
   edges: Edges;
 }
 
-const Feed = ({ edges }: Props) => (
+const Feed: React.FC<Props> = ({ edges }) => (
   <div className={styles['feed']}>
     {edges.map(edge => (
       <div className={styles['feed__item']} key={edge.node.fields.slug}>
