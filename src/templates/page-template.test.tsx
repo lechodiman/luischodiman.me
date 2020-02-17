@@ -9,8 +9,8 @@ import { RenderCallback } from '../types';
 describe('PageTemplate', () => {
   const props = {
     data: {
-      ...markdownRemark
-    }
+      ...markdownRemark,
+    },
   };
 
   beforeEach(() => {

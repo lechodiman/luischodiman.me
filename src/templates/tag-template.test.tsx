@@ -17,9 +17,9 @@ describe('TagTemplate', () => {
 
   const props = {
     data: {
-      ...allMarkdownRemark
+      ...allMarkdownRemark,
     },
-    ...pageContext
+    ...pageContext,
   };
 
   it('renders correctly', () => {

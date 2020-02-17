@@ -22,7 +22,7 @@ const TagTemplate: React.FC<Props> = ({ data, pageContext }) => {
     prevPagePath,
     nextPagePath,
     hasPrevPage,
-    hasNextPage
+    hasNextPage,
   } = pageContext;
 
   const { edges } = data.allMarkdownRemark;
