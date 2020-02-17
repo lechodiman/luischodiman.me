@@ -14,16 +14,16 @@ module.exports = {
   menu: [
     {
       label: 'Artículos',
-      path: '/'
+      path: '/',
     },
     {
       label: 'Acerca de mí',
-      path: '/pages/about'
+      path: '/pages/about',
     },
     {
       label: 'Contáctame',
-      path: '/pages/contacts'
-    }
+      path: '/pages/contacts',
+    },
   ],
   author: {
     name: 'Luis Chodiman',
@@ -45,7 +45,7 @@ module.exports = {
       weibo: '',
       codepen: '',
       youtube: '',
-      soundcloud: ''
-    }
-  }
+      soundcloud: '',
+    },
+  },
 };
