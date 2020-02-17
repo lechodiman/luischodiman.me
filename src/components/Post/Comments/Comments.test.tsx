@@ -7,15 +7,15 @@ import { RenderCallback } from '../../../types';
 
 describe('Comments', () => {
   beforeEach(() => {
-    StaticQuery.mockImplementationOnce(
-      ({ render }: RenderCallback) => render(siteMetadata),
-      useStaticQuery.mockReturnValue(siteMetadata)
+    (StaticQuery as jest.Mock).mockImplementationOnce(
+      ({ render }: RenderCallback) => render(siteMetadata)
     );
+    (useStaticQuery as jest.Mock).mockReturnValue(siteMetadata);
   });
 
   const props = {
     postTitle: 'test',
-    postSlug: '/test'
+    postSlug: '/test',
   };
 
   it('renders correctly', () => {

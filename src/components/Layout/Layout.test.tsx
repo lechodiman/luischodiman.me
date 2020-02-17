@@ -10,14 +10,14 @@ describe('Layout', () => {
     ...siteMetadata,
     children: 'test',
     description: 'test',
-    title: 'test'
+    title: 'test',
   };
 
   beforeEach(() => {
-    StaticQuery.mockImplementationOnce(
-      ({ render }: RenderCallback) => render(props),
-      useStaticQuery.mockReturnValue(props)
+    (StaticQuery as jest.Mock).mockImplementationOnce(
+      ({ render }: RenderCallback) => render(props)
     );
+    (useStaticQuery as jest.Mock).mockReturnValue(props);
   });
 
   it('renders correctly', () => {

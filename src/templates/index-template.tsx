@@ -21,7 +21,7 @@ const IndexTemplate: React.FC<Props> = ({ data, pageContext }) => {
     hasNextPage,
     hasPrevPage,
     prevPagePath,
-    nextPagePath
+    nextPagePath,
   } = pageContext;
 
   const { edges } = data.allMarkdownRemark;

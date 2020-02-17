@@ -7,10 +7,10 @@ import { RenderCallback } from '../../../types';
 
 describe('Author', () => {
   beforeEach(() => {
-    StaticQuery.mockImplementationOnce(
-      ({ render }: RenderCallback) => render(siteMetadata),
-      useStaticQuery.mockReturnValue(siteMetadata)
+    (StaticQuery as jest.Mock).mockImplementationOnce(
+      ({ render }: RenderCallback) => render(siteMetadata)
     );
+    (useStaticQuery as jest.Mock).mockReturnValue(siteMetadata);
   });
 
   it('renders correctly', () => {

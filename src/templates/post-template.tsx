@@ -17,7 +17,7 @@ const PostTemplate: React.FC<Props> = ({ data }) => {
   const {
     title: postTitle,
     description: postDescription,
-    socialImage
+    socialImage,
   } = frontmatter;
   const metaDescription =
     postDescription !== null ? postDescription : siteSubtitle;

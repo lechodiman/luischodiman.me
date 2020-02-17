@@ -19,7 +19,7 @@ const PageTemplate = ({ data }: Props) => {
   const {
     title: pageTitle,
     description: pageDescription,
-    socialImage
+    socialImage,
   } = frontmatter;
   const metaDescription =
     pageDescription !== null ? pageDescription : siteSubtitle;
