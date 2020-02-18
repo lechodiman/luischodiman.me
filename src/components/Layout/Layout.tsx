@@ -5,7 +5,6 @@ import { useSiteMetadata } from '../../hooks';
 import styles from './Layout.module.scss';
 
 interface Props {
-  children: React.ReactNode;
   title: string;
   description?: string;
   socialImage?: string;
@@ -15,7 +14,7 @@ const Layout: React.FC<Props> = ({
   children,
   title,
   description,
-  socialImage
+  socialImage,
 }) => {
   const { author, url } = useSiteMetadata();
   const metaImage = socialImage != null ? socialImage : author.photo;
