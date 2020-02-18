@@ -46,6 +46,16 @@ exports[`PostTemplate renders correctly 1`] = `
           Publicado el 
           1 Sep 2016
         </p>
+        <p
+          className="meta__editLink"
+        >
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Editar post en Github
+          </a>
+        </p>
       </div>
       <div
         className="tags"
