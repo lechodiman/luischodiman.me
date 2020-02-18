@@ -11,6 +11,7 @@ category: Productividad
 tags:
   - vscode
   - vim
+  - vscode extension
 ---
 
 **Visual Studio Code** es mi editor de preferencia actualmente, y por varios motivos. El más importante es la capacidad de añadir funcionalidades con extensiones de una manera muy intuitiva.

@@ -14,7 +14,7 @@
     "test:coverage": "jest --coverage --config ./jest/jest-config.js",
     "test:watch": "jest --watch --config ./jest/jest-config.js"
   },
-  "repository": "https://github.com/lechodiman/lechodiman-blog",
+  "repository": "https://github.com/lechodiman/luischodiman.me",
   "author": "Luis Chodiman <lechodiman@uc.cl>",
   "license": "MIT",
   "keywords": [],
