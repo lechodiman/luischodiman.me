@@ -3,14 +3,12 @@ import renderer from 'react-test-renderer';
 import { useStaticQuery, StaticQuery } from 'gatsby';
 import Author from './Author';
 import siteMetadata from '../../../../jest/__fixtures__/site-metadata';
-import { RenderCallback } from '../../../types';
+
+const mockedUseStaticQuery = useStaticQuery as jest.Mock;
 
 describe('Author', () => {
   beforeEach(() => {
-    (StaticQuery as jest.Mock).mockImplementationOnce(
-      ({ render }: RenderCallback) => render(siteMetadata)
-    );
-    (useStaticQuery as jest.Mock).mockReturnValue(siteMetadata);
+    mockedUseStaticQuery.mockReturnValue(siteMetadata);
   });
 
   it('renders correctly', () => {
