@@ -25,6 +25,7 @@ type Node = {
     slug: string;
     categorySlug?: string;
     tagSlugs?: string[];
+    editLink?: string;
   };
   frontmatter: {
     date: string;
@@ -34,7 +35,7 @@ type Node = {
     title: string;
     socialImage?: string;
   };
-  html?: string;
+  html: string;
   id?: string;
 };
 

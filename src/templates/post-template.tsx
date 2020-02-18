@@ -41,6 +41,7 @@ export const query = graphql`
       fields {
         slug
         tagSlugs
+        editLink
       }
       frontmatter {
         date

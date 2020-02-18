@@ -14,7 +14,7 @@ interface Props {
 
 const Post = ({ post }: Props) => {
   const { html } = post;
-  const { tagSlugs, slug } = post.fields;
+  const { tagSlugs, slug, editLink } = post.fields;
   const { tags, title, date } = post.frontmatter;
 
   return (
@@ -28,7 +28,7 @@ const Post = ({ post }: Props) => {
       </div>
 
       <div className={styles['post__footer']}>
-        <Meta date={date} />
+        <Meta date={date} editLink={editLink} />
         {tags && tagSlugs && <Tags tags={tags} tagSlugs={tagSlugs} />}
         <Author />
       </div>
