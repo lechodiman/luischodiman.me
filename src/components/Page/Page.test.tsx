@@ -4,12 +4,12 @@ import Page from './Page';
 
 describe('Page', () => {
   const props = {
-    children: 'test',
-    title: 'test'
+    title: 'test',
   };
 
   it('renders correctly', () => {
-    const tree = renderer.create(<Page {...props} />).toJSON();
+    const children = 'test';
+    const tree = renderer.create(<Page {...props}>{children}</Page>).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
