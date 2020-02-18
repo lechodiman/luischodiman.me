@@ -78,8 +78,8 @@ que esta tome efecto.
 
 Perfecto, ya tienes la extensión. Ahora, abre algún archivo en VSCode.
 
-Inmediatamente vas a notar que no puedes escribir nada, lo que es
-perfectamente normal, porque estás en **Normal Mode**.
+Inmediatamente vas a notar que no puedes escribir nada, lo que es perfectamente
+normal, porque estás en **Normal Mode**.
 
 Además, si intentas usar **keyboard shortcuts** de VSCode como `CTRL-C` o
 `CTRL-V`, no se realizará la acción que deseas de copiar y pegar,
@@ -88,15 +88,15 @@ respectivamente.
 Esto es porque en Vim hay varios **keystrokes** que están reservados. Por
 ejemplo, `CTRL-F` es para hacer scroll hacia abajo media página.
 
-Para mí esto fue sorpresivo porque implicaba borrar varios atajos que ya
-estaban registrados en mi memoria muscular. Pero, todos estos cambios tienen
-una razón de ser, y a fin de cuentas, los atajos nativos de Vim para copiar,
-pegar, eliminar lineas, etc, son más eficientes que los que ya usaba.
+Para mí esto fue sorpresivo porque implicaba borrar varios atajos que ya estaban
+registrados en mi memoria muscular. Pero, todos estos cambios tienen una razón
+de ser, y a fin de cuentas, los atajos nativos de Vim para copiar, pegar,
+eliminar lineas, etc, son más eficientes que los que ya usaba.
 
 Si quieres configurar qué combinaciones quieres mantener puedes modificar el
 campo `"vim.handleKeys"` de tu `settings.json`. Para modificar este archivo,
-puedes abrir la paleta de comandos con `CTRL-SHIFT-P` o `CMD-SHIFT-P` y
-escribir 'Open Settings (JSON)'.
+puedes abrir la paleta de comandos con `CTRL-SHIFT-P` o `CMD-SHIFT-P` y escribir
+'Open Settings (JSON)'.
 
 Por ejemplo, yo aún mantengo `CTRL-F` para buscar:
 

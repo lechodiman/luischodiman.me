@@ -109,4 +109,5 @@ Para poner en práctica lo aprendido te sugiero:
 
 - Intentar usar uno de estos métodos en tu día a día, quizás refactorizando un
   código antiguo o al crear uno nuevo.
-- Intentar aplicar el estilo _point-free_ para abstraer aún más las implementaciones que reciban las funciones `every` y `some`.
+- Intentar aplicar el estilo _point-free_ para abstraer aún más las
+  implementaciones que reciban las funciones `every` y `some`.
