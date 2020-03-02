@@ -4,6 +4,7 @@ import { useStaticQuery, StaticQuery } from 'gatsby';
 import Post from './Post';
 import siteMetadata from '../../../jest/__fixtures__/site-metadata';
 import { RenderCallback } from '../../types';
+import { FluidObject } from 'gatsby-image';
 
 describe('Post', () => {
   beforeEach(() => {
@@ -20,14 +21,25 @@ describe('Post', () => {
       fields: {
         slug: '/test',
         categorySlug: '/test-category',
-        tagSlugs: ['/test_0', '/test_1']
+        tagSlugs: ['/test_0', '/test_1'],
       },
       frontmatter: {
         date: '2016-09-01',
         tags: ['test_0', 'test_1'],
-        title: 'test'
-      }
-    }
+        title: 'test',
+        socialImage: {
+          sharp: {
+            fluid: {
+              aspectRatio: 0,
+              src: 'test',
+              srcSet: 'test',
+              sizes: 'test',
+            },
+          },
+        },
+        socialImageCredit: 'test',
+      },
+    },
   };
 
   it('renders correctly', () => {

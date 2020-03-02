@@ -34,7 +34,7 @@ type Node = {
     category?: string;
     tags?: string[];
     title: string;
-    socialImage: {
+    socialImage?: {
       sharp: {
         original: {
           src: string;

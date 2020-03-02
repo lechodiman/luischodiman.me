@@ -33,7 +33,7 @@ const Post = ({ post }: Props) => {
         <Content
           body={html}
           title={title}
-          socialImage={socialImage.sharp.fluid}
+          socialImage={socialImage?.sharp.fluid}
           socialImageCredit={socialImageCredit}
         />
       </div>
