@@ -13,6 +13,7 @@ tags:
   - vue
   - computed
   - watchers
+socialImage: ./images/ocean-ng-clock.jpg
 ---
 
 **Vue** es el framework de _javascript_ con la curva de aprendizaje más plana

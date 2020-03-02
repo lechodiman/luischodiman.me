@@ -12,6 +12,7 @@ tags:
   - vscode
   - vim
   - vscode extension
+socialImage: ./images/carl-heyerdahl-do-more.jpg
 ---
 
 **Visual Studio Code** es mi editor de preferencia actualmente, y por varios
