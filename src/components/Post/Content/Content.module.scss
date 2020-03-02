@@ -9,7 +9,18 @@
   .content__social_image {
     text-align: center;
 
-    .img {
+    & a {
+      text-decoration: underline;
+    }
+
+    & * {
+      max-width: $layout-post-width * 1.2;
+      max-height: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    & img {
       max-width: 100%;
     }
   }

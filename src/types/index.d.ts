@@ -42,7 +42,7 @@ type Node = {
         fluid: FluidObject;
       };
     };
-    socialImageCredit: string;
+    socialImageCredit?: string;
   };
   html: string;
   id?: string;

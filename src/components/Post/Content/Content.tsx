@@ -8,7 +8,7 @@ interface Props {
   body: string;
   title: string;
   socialImage: FluidObject;
-  socialImageCredit: string;
+  socialImageCredit?: string;
 }
 
 const Content: React.FC<Props> = ({
@@ -20,9 +20,9 @@ const Content: React.FC<Props> = ({
   <div className={styles['content']}>
     <h1 className={styles['content__title']}>{title}</h1>
 
-    <div className={styles.content__social_image}>
+    <div className={styles['content__social_image']}>
       <Image fluid={socialImage} alt={title}></Image>
-      <Markdown>{socialImageCredit}</Markdown>
+      {socialImageCredit && <Markdown>{socialImageCredit}</Markdown>}
     </div>
 
     <div

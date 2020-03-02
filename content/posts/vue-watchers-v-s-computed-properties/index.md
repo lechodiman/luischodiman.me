@@ -14,12 +14,12 @@ tags:
   - computed
   - watchers
 socialImage: './images/banner.jpg'
-socialImageCredit: 'Photo by [Ocean Ng](https://unsplash.com/photos/L0xOtAnv94Y)'
+socialImageCredit: 'Foto por [Ocean Ng](https://unsplash.com/photos/L0xOtAnv94Y)'
 ---
 
 **Vue** es el framework de _javascript_ con la curva de aprendizaje más plana
-*de los tres grandes (Vue, React, Angular), pero eso no significa que no
-*existan cosas que aprender (y aprender a usar bien).
+de los tres grandes (Vue, React, Angular), pero eso no significa que no
+existan cosas que aprender (y aprender a usar bien).
 
 Una de las cosas que encontré más novedosas al aprender **Vue** y usarlo en
 producción fueron los **watchers** y **computed properties**.
@@ -52,10 +52,12 @@ const vm = new Vue({
     },
   },
   watch: {
+    // highlight-start
     todos: function(val) {
       const isCompleted = todo => todo.completed
       this.completedTodos = this.todos.filter(isCompleted)
     }
+    // highlight-end
   }
 })
 ```
