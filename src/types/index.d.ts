@@ -1,4 +1,5 @@
 import React from 'react';
+import { FluidObject } from 'gatsby-image';
 
 type RenderCallback = {
   render: (data: any) => React.ReactNode;
@@ -33,7 +34,15 @@ type Node = {
     category?: string;
     tags?: string[];
     title: string;
-    socialImage?: string;
+    socialImage?: {
+      sharp: {
+        original: {
+          src: string;
+        };
+        fluid: FluidObject;
+      };
+    };
+    socialImageCredit?: string;
   };
   html: string;
   id?: string;

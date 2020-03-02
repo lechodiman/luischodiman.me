@@ -1,7 +1,6 @@
 ---
 title: 'Acerca de mí'
 template: 'page'
-socialImage: '/media/image-2.jpg'
 ---
 
 Siempre me ha apasionado enseñar y compartir conocimiento, porque creo que es un paso fundamental para consolidar el aprendizaje propio.

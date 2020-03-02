@@ -12,6 +12,8 @@ tags:
   - vscode
   - vim
   - vscode extension
+socialImage: './images/banner.jpg'
+socialImageCredit: 'Foto por [Carl Heyerdahl](https://unsplash.com/photos/KE0nC8-58MQ)'
 ---
 
 **Visual Studio Code** es mi editor de preferencia actualmente, y por varios
@@ -69,7 +71,7 @@ cosas de Vim día a día, pero aún así he sentido los beneficios.
 - Instalar la primera extension que aparece
 - Voilá
 
-![VSCode Vim en el marketplace](images/vim-marketplace.png)
+![VSCode Vim en el marketplace](./images/vim-marketplace.png)
 
 Puede ser que después de instalar la extensión debas reiniciar el editor para
 que esta tome efecto.
@@ -113,7 +115,7 @@ diferencia de Vim con los demás editores: los **modos**
 
 Si abres un archivo y ves la barra inferior deberías ver algo como:
 
-![VSCode Status Bar en Normal Mode](images/normal-mode.png)
+![VSCode Status Bar en Normal Mode](./images/normal-mode.png)
 
 En la barra inferior (status bar) podrás ver `--NORMAL--`, lo que indica que
 estás en Normal Mode.
