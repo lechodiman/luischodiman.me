@@ -15,7 +15,13 @@ interface Props {
 const Post = ({ post }: Props) => {
   const { html } = post;
   const { tagSlugs, slug, editLink } = post.fields;
-  const { tags, title, date } = post.frontmatter;
+  const {
+    tags,
+    title,
+    date,
+    socialImage,
+    socialImageCredit,
+  } = post.frontmatter;
 
   return (
     <div className={styles['post']}>
@@ -24,7 +30,12 @@ const Post = ({ post }: Props) => {
       </Link>
 
       <div className={styles['post__content']}>
-        <Content body={html} title={title} />
+        <Content
+          body={html}
+          title={title}
+          socialImage={socialImage.sharp.fluid}
+          socialImageCredit={socialImageCredit}
+        />
       </div>
 
       <div className={styles['post__footer']}>
