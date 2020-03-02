@@ -99,6 +99,8 @@ module.exports = {
         ],
       },
     },
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
@@ -112,9 +114,8 @@ module.exports = {
           {
             resolve: 'gatsby-remark-images',
             options: {
+              backgroundColor: '#fafafa',
               maxWidth: 960,
-              withWebp: true,
-              ignoreFileExtensions: [],
             },
           },
           {
@@ -122,15 +123,16 @@ module.exports = {
             options: { wrapperStyle: 'margin-bottom: 1.0725rem' },
           },
           'gatsby-remark-autolink-headers',
-          'gatsby-remark-prismjs',
+          {
+            resolve: 'gatsby-remark-prismjs',
+            showLineNumbers: true,
+          },
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
           'gatsby-remark-external-links',
         ],
       },
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-plugin-google-gtag',
       options: {

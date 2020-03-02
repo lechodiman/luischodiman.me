@@ -4,6 +4,7 @@ import Layout from '../components/Layout';
 import Post from '../components/Post';
 import { useSiteMetadata } from '../hooks';
 import { MarkdownRemark } from '../types';
+import Image from 'gatsby-image';
 
 type Props = {
   data: {
@@ -26,8 +27,12 @@ const PostTemplate: React.FC<Props> = ({ data }) => {
     <Layout
       title={`${postTitle} - ${siteTitle}`}
       description={metaDescription}
-      socialImage={socialImage}
+      socialImage={socialImage.sharp.original.src}
     >
+      <Image
+        fluid={data.markdownRemark.frontmatter.socialImage.sharp.fluid}
+        alt={postTitle}
+      ></Image>
       <Post post={data.markdownRemark} />
     </Layout>
   );
@@ -48,7 +53,17 @@ export const query = graphql`
         description
         tags
         title
-        socialImage
+        socialImage {
+          sharp: childImageSharp {
+            original {
+              src
+            }
+            fluid(maxWidth: 720, maxHeight: 720) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+        socialImageCredit
       }
     }
   }
