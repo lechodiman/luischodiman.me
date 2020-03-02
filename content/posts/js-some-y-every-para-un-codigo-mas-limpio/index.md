@@ -12,7 +12,8 @@ tags:
   - cleancode
   - functional
   - point-free
-socialImage: sarah-dorweiler-plant.jpg
+socialImage: './images/banner.jpg'
+socialImageCredit: 'Photo by [Sarah Dorweiler](https://unsplash.com/photos/x2Tmfd1-SgA)'
 ---
 
 En este artículo quiero compartir dos métodos de _arrays_ que van a ayudarte
