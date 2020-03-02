@@ -4,12 +4,19 @@
   "main": "dist/index.js",
   "license": "MIT",
   "devDependencies": {
-    "nodemon": "^2.0.2",
+    "@types/inquirer": "^6.5.0",
+    "@types/prettier": "^1.19.0",
     "ts-node": "^8.6.2",
     "typescript": "^3.8.3"
   },
   "scripts": {
     "start": "tsc && node dist/index.js",
-    "dev": "nodemon --watch 'src/**/*.ts --exec ts-node src/index.ts"
+    "develop": "ts-node src/index.ts"
+  },
+  "dependencies": {
+    "@sindresorhus/slugify": "^0.11.0",
+    "inquirer": "^7.0.5",
+    "json-to-pretty-yaml": "^1.2.2",
+    "prettier": "^1.19.1"
   }
 }
