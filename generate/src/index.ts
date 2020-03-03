@@ -23,8 +23,18 @@ const formatDate = (d: Date) =>
 const fromRoot = (...paths: string[]) =>
   path.join(__dirname, '..', '..', ...paths);
 
+interface Answers {
+  title: string;
+  description: string;
+  draft: boolean;
+  category: string;
+  tags: string;
+}
+
 async function generateBlogPost() {
-  const { title, description, draft, category, tags } = await inquirer.prompt([
+  const { title, description, draft, category, tags } = await inquirer.prompt<
+    Answers
+  >([
     {
       type: 'input',
       name: 'title',
@@ -52,6 +62,9 @@ async function generateBlogPost() {
       message: 'Tags (comma separated)',
     },
   ]);
+
+  const yamlTags = tags.replace(' ', '').split(',');
+  console.log({ yamlTags });
 
   const slug = slufigy(title);
   const destination = fromRoot('content/posts', slug);
