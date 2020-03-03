@@ -11,6 +11,9 @@ import fs from 'fs';
 import tinify from 'tinify';
 import ora from 'ora';
 import util from 'util';
+import config from './config';
+
+tinify.key = config.TINY_PNG_API_KEY;
 
 const padLeft0 = (n: number) => n.toString().padStart(2, '0');
 
@@ -54,6 +57,8 @@ async function generateBlogPost() {
   const destination = fromRoot('content/posts', slug);
   mkdirp.sync(destination);
 
+  const socialImageCredit = await getBannerPhoto(title, destination);
+
   const yaml = jsToYaml.stringify({
     title,
     slug,
@@ -63,6 +68,7 @@ async function generateBlogPost() {
     category,
     tags,
     socialImage: './images/banner.jpg',
+    socialImageCredit,
   });
 
   const markdown = prettier.format(`---\n${yaml}\n---\n`, {
@@ -74,7 +80,7 @@ async function generateBlogPost() {
   console.log(`${destination.replace(process.cwd(), '')} is all ready for you`);
 }
 
-async function getBannerPhoto(title, destination) {
+async function getBannerPhoto(title: string, destination: string) {
   const imagesDestination = path.join(destination, 'images');
 
   await open(
@@ -116,7 +122,7 @@ async function getBannerPhoto(title, destination) {
   return socialImageCredit;
 }
 
-async function getPhotoCredit(unsplashPhotoId) {
+async function getPhotoCredit(unsplashPhotoId: string) {
   const response = await axios({
     url: `https://unsplash.com/photos/${unsplashPhotoId}`,
     headers: { 'User-Agent': fakeUa() },
