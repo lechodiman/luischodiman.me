@@ -6,17 +6,20 @@ import siteMetadata from '../../jest/__fixtures__/site-metadata';
 import allMarkdownRemark from '../../jest/__fixtures__/all-markdown-remark';
 import { RenderCallback } from '../types';
 
+const mockedUseStaticQuery = useStaticQuery as jest.Mock;
+const mockedStaticQuery = StaticQuery as jest.Mock;
+
 describe('TagsListTemplate', () => {
   const props = {
     ...siteMetadata,
-    ...allMarkdownRemark
+    ...allMarkdownRemark,
   };
 
   beforeEach(() => {
-    (StaticQuery as jest.Mock).mockImplementationOnce(
-      ({ render }: RenderCallback) => render(props)
+    mockedStaticQuery.mockImplementationOnce(({ render }: RenderCallback) =>
+      render(props)
     );
-    (useStaticQuery as jest.Mock).mockReturnValue(props);
+    mockedUseStaticQuery.mockReturnValue(props);
   });
 
   it('renders correctly', () => {

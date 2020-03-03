@@ -4,14 +4,16 @@ import { useStaticQuery, StaticQuery } from 'gatsby';
 import Post from './Post';
 import siteMetadata from '../../../jest/__fixtures__/site-metadata';
 import { RenderCallback } from '../../types';
-import { FluidObject } from 'gatsby-image';
+
+const mockedUseStaticQuery = useStaticQuery as jest.Mock;
+const mockedStaticQuery = StaticQuery as jest.Mock;
 
 describe('Post', () => {
   beforeEach(() => {
-    StaticQuery.mockImplementationOnce(
-      ({ render }: RenderCallback) => render(siteMetadata),
-      useStaticQuery.mockReturnValue(siteMetadata)
+    mockedStaticQuery.mockImplementationOnce(({ render }: RenderCallback) =>
+      render(siteMetadata)
     );
+    mockedUseStaticQuery.mockReturnValue(siteMetadata);
   });
 
   const props = {

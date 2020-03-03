@@ -5,12 +5,15 @@ import Sidebar from './Sidebar';
 import siteMetadata from '../../../jest/__fixtures__/site-metadata';
 import { RenderCallback } from '../../types';
 
+const mockedUseStaticQuery = useStaticQuery as jest.Mock;
+const mockedStaticQuery = StaticQuery as jest.Mock;
+
 describe('Sidebar', () => {
   beforeEach(() => {
-    (StaticQuery as jest.Mock).mockImplementationOnce(
-      ({ render }: RenderCallback) => render(siteMetadata)
+    mockedStaticQuery.mockImplementationOnce(({ render }: RenderCallback) =>
+      render(siteMetadata)
     );
-    (useStaticQuery as jest.Mock).mockReturnValue(siteMetadata);
+    mockedUseStaticQuery.mockReturnValue(siteMetadata);
   });
 
   const props = {

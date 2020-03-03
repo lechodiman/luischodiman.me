@@ -7,19 +7,20 @@ import allMarkdownRemark from '../../jest/__fixtures__/all-markdown-remark';
 import pageContext from '../../jest/__fixtures__/page-context';
 import { RenderCallback } from '../types';
 
+const mockedUseStaticQuery = useStaticQuery as jest.Mock;
+const mockedStaticQuery = StaticQuery as jest.Mock;
+
 describe('IndexTemplate', () => {
   const props = {
-    data: {
-      ...allMarkdownRemark
-    },
-    ...pageContext
+    data: allMarkdownRemark,
+    pageContext,
   };
 
   beforeEach(() => {
-    (StaticQuery as jest.Mock).mockImplementationOnce(
-      ({ render }: RenderCallback) => render(siteMetadata)
+    mockedStaticQuery.mockImplementationOnce(({ render }: RenderCallback) =>
+      render(siteMetadata)
     );
-    (useStaticQuery as jest.Mock).mockReturnValue(siteMetadata);
+    mockedUseStaticQuery.mockReturnValue(siteMetadata);
   });
 
   it('renders correctly', () => {
