@@ -12,24 +12,10 @@ import tinify from 'tinify';
 import ora from 'ora';
 import util from 'util';
 import config from './config';
+import { formatDate, fromRoot } from './utils';
+import { Answers } from './types';
 
 tinify.key = config.TINY_PNG_API_KEY;
-
-const padLeft0 = (n: number) => n.toString().padStart(2, '0');
-
-const formatDate = (d: Date) =>
-  `${d.getFullYear()}-${padLeft0(d.getMonth() + 1)}-${padLeft0(d.getDate())}`;
-
-const fromRoot = (...paths: string[]) =>
-  path.join(__dirname, '..', '..', ...paths);
-
-interface Answers {
-  title: string;
-  description: string;
-  draft: boolean;
-  category: string;
-  tags: string;
-}
 
 async function generateBlogPost() {
   const { title, description, draft, category, tags } = await inquirer.prompt<
@@ -64,38 +50,56 @@ async function generateBlogPost() {
   ]);
 
   const yamlTags = tags.replace(' ', '').split(',');
-  console.log({ yamlTags });
-
   const slug = slufigy(title);
-  const destination = fromRoot('content/posts', slug);
-  mkdirp.sync(destination);
 
-  const socialImageCredit = await getBannerPhoto(title, destination);
+  const unsplashPhotoId = await getUnsplashPhotoId(title);
+  const socialImageCredit = await getPhotoCredit(unsplashPhotoId);
 
-  const yaml = jsToYaml.stringify({
+  const yaml: string = jsToYaml.stringify({
     title,
     slug,
     draft,
     date: formatDate(new Date()),
     description,
     category,
-    tags,
+    tags: yamlTags,
     socialImage: './images/banner.jpg',
     socialImageCredit,
   });
 
+  const postDestination = createPostFolder(slug);
+  createPostMarkdown(yaml, postDestination);
+
+  const imagesDestination = await createImagesFolder(postDestination);
+  await downloadImage(unsplashPhotoId, imagesDestination);
+}
+
+function createPostMarkdown(yaml: string, postDestination: string) {
   const markdown = prettier.format(`---\n${yaml}\n---\n`, {
     parser: 'markdown',
   });
+  fs.writeFileSync(path.join(postDestination, 'index.md'), markdown);
 
-  fs.writeFileSync(path.join(destination, 'index.md'), markdown);
-
-  console.log(`${destination.replace(process.cwd(), '')} is all ready for you`);
+  console.log(
+    `${postDestination.replace(process.cwd(), '')} is all ready for you`
+  );
 }
 
-async function getBannerPhoto(title: string, destination: string) {
-  const imagesDestination = path.join(destination, 'images');
+function createPostFolder(slug: string) {
+  const postDestination = fromRoot('content/posts', slug);
+  mkdirp.sync(postDestination);
 
+  return postDestination;
+}
+
+async function createImagesFolder(postDestination: string) {
+  const imagesDestination = path.join(postDestination, 'images');
+  mkdirp.sync(imagesDestination);
+
+  return imagesDestination;
+}
+
+async function getUnsplashPhotoId(title: string) {
   await open(
     `https://unsplash.com/search/photos/${encodeURIComponent(title)}`,
     {
@@ -111,8 +115,13 @@ async function getBannerPhoto(title: string, destination: string) {
     },
   ]);
 
-  mkdirp.sync(imagesDestination);
+  return unsplashPhotoId;
+}
 
+async function downloadImage(
+  unsplashPhotoId: string,
+  imagesDestination: string
+) {
   const source = tinify
     .fromUrl(
       `https://unsplash.com/photos/${unsplashPhotoId}/download?force=true`
@@ -130,9 +139,6 @@ async function getBannerPhoto(title: string, destination: string) {
 
   spinner.text = 'compressed the image with tinypng.com';
   spinner.stop();
-
-  const socialImageCredit = await getPhotoCredit(unsplashPhotoId);
-  return socialImageCredit;
 }
 
 async function getPhotoCredit(unsplashPhotoId: string) {
