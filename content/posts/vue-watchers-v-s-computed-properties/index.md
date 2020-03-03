@@ -14,12 +14,13 @@ tags:
   - computed
   - watchers
 socialImage: './images/banner.jpg'
-socialImageCredit: 'Foto por [Ocean Ng](https://unsplash.com/photos/L0xOtAnv94Y)'
+socialImageCredit:
+  'Foto por [Ocean Ng](https://unsplash.com/photos/L0xOtAnv94Y)'
 ---
 
-**Vue** es el framework de _javascript_ con la curva de aprendizaje más plana
-de los tres grandes (Vue, React, Angular), pero eso no significa que no
-existan cosas que aprender (y aprender a usar bien).
+**Vue** es el framework de _javascript_ con la curva de aprendizaje más plana de
+los tres grandes (Vue, React, Angular), pero eso no significa que no existan
+cosas que aprender (y aprender a usar bien).
 
 Una de las cosas que encontré más novedosas al aprender **Vue** y usarlo en
 producción fueron los **watchers** y **computed properties**.
@@ -27,12 +28,12 @@ producción fueron los **watchers** y **computed properties**.
 ## Watchers
 
 Esencialmente, las **watched properties** o **watcher** son funciones que nos
-ayudan a generar cambios (o _side effects_) dentro de un componente en
-**Vue**. Lamentablemente, hay veces que se usan innecesariamente cuando una
-_computed property_ bastaba.
+ayudan a generar cambios (o _side effects_) dentro de un componente en **Vue**.
+Lamentablemente, hay veces que se usan innecesariamente cuando una _computed
+property_ bastaba.
 
-Por ejemplo, si tenemos una lista de _to dos_ y queremos obtener solo
-aquellos que están completados podríamos **ingenuamente** hacer algo así:
+Por ejemplo, si tenemos una lista de _to dos_ y queremos obtener solo aquellos
+que están completados podríamos **ingenuamente** hacer algo así:
 
 ```js
 const vm = new Vue({
@@ -68,21 +69,20 @@ Pero, si bien esto funciona, hay varios problemas con este caso de uso.
   producto de ejecutar una función, en este caso sería el **watch**. Esto no es
   algo malo en sí mismo pero si se puede evitar, hay que hacerlo (hint: en este
   caso sí se puede evitar)
-- Esta es una reacción _imperativa_ ante cambios en
-  el valor de la variable `todos`, lo cual se puede cambiar por un enfoque
-  _declarativo_
+- Esta es una reacción _imperativa_ ante cambios en el valor de la variable
+  `todos`, lo cual se puede cambiar por un enfoque _declarativo_
 
-Okay, basta de suspenso, entonces ¿cómo se puede refactorizar este código
-para arreglar los problemas mencionados? y ¿cuál sería un buen caso de uso
-para un _watcher_?
+Okay, basta de suspenso, entonces ¿cómo se puede refactorizar este código para
+arreglar los problemas mencionados? y ¿cuál sería un buen caso de uso para un
+_watcher_?
 
 ## Refactorizando con computed properties
 
 Las **computed properties** son funciones que "por debajo" de Vue asignan
 propiedades a la instancia de Vue (con _getters_ y _setters_ de Javascript).
 
-Esto permite que podamos definir propiedades que dependan de otras y que
-siempre estén actualizadas de una forma _declarativa_.
+Esto permite que podamos definir propiedades que dependan de otras y que siempre
+estén actualizadas de una forma _declarativa_.
 
 Además tienen las ventajas de ser _cacheadas_ internamente por Vue. Así, solo
 cambian cuando las variables de las que dependen cambian.
@@ -179,5 +179,7 @@ el antiguo, asignamos el valor de la variable `activeStepWentBackwards` como
 
 ## Action Points
 
-- Si te encuentras con la necesidad de usar propiedades que dependan de otras en tu día a día con Vue: usa computed properties.
-- Si has usado _watchers_ innecesariamente en casos que una _computed property_ bastaba, intenta refactorizar tu código para ver si queda más ordenado.
+- Si te encuentras con la necesidad de usar propiedades que dependan de otras en
+  tu día a día con Vue: usa computed properties.
+- Si has usado _watchers_ innecesariamente en casos que una _computed property_
+  bastaba, intenta refactorizar tu código para ver si queda más ordenado.

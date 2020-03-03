@@ -13,7 +13,8 @@ tags:
   - vim
   - vscode extension
 socialImage: './images/banner.jpg'
-socialImageCredit: 'Foto por [Carl Heyerdahl](https://unsplash.com/photos/KE0nC8-58MQ)'
+socialImageCredit:
+  'Foto por [Carl Heyerdahl](https://unsplash.com/photos/KE0nC8-58MQ)'
 ---
 
 **Visual Studio Code** es mi editor de preferencia actualmente, y por varios
@@ -51,18 +52,17 @@ marcan un antes y un después en la productividad al momento de desarrollar.
 
 Vim es un editor de texto plano que fue presentado inicialmente hace mucho
 tiempo (según [wikipedia](https://es.wikipedia.org/wiki/Vim) en 1991). La
-principal característica es que posee distintos modos para realizar
-operaciones y además cuenta con un lenguaje para crear combinaciones de
-_keystrokes_.
+principal característica es que posee distintos modos para realizar operaciones
+y además cuenta con un lenguaje para crear combinaciones de _keystrokes_.
 
 ## Razón de usar Vim
 
 Velocidad. La gran ventaja de Vim es que puedes editar y escribir código casi
-tan rápido como lo piensas (ok, quizás es un poco exagerado, pero se entiende
-el punto).
+tan rápido como lo piensas (ok, quizás es un poco exagerado, pero se entiende el
+punto).
 
-Personalmente, no me considero un usuario avanzado y aún sigo aprendiendo
-cosas de Vim día a día, pero aún así he sentido los beneficios.
+Personalmente, no me considero un usuario avanzado y aún sigo aprendiendo cosas
+de Vim día a día, pero aún así he sentido los beneficios.
 
 ## Instalación en VSCode
 
@@ -124,13 +124,13 @@ Espera, ¿qué es eso de Normal Mode? Bueno, como te comentaba, Vim trabaja con
 modos y dependiendo del modo en que estés, las teclas que presiones tendrán
 distinto efecto. Los modos que usarás el 80% de tu tiempo son:
 
-- **Normal Mode** se usa para moverse en el archivo y entre archivos. Como
-  dice su nombre, es el modo 'normal' y es el modo en el que deberías pasar la
-  mayor parte del tiempo. Para ir de cualquier otro modo a **normal mode,**
-  presiona `<ESC>`
+- **Normal Mode** se usa para moverse en el archivo y entre archivos. Como dice
+  su nombre, es el modo 'normal' y es el modo en el que deberías pasar la mayor
+  parte del tiempo. Para ir de cualquier otro modo a **normal mode,** presiona
+  `<ESC>`
 
-- **Insert Mode** es el modo para escribir texto. Podría decirse que este es
-  el modo en el que está la mayoría de editores 'comúnes'. Para ir de **normal
+- **Insert Mode** es el modo para escribir texto. Podría decirse que este es el
+  modo en el que está la mayoría de editores 'comúnes'. Para ir de **normal
   mode** a **insert mode**, presiona `i`
 
 - **Visual Mode** es el modo para seleccionar texto. Es equivalente a lo que
@@ -155,10 +155,12 @@ posicionar los dedos de la mano izquierda en `asdf` y los de la mano derecha en
 `jklñ` (si usas teclado latino americano) o `jkl;` (si usas teclado
 estadounidense).
 
-Para esto solo debes preocuparte que tus dedos indices estén sobre las teclas `f` y `j`, la cuales, convenientemente tienen una pequeña marca para poder sentir que tus dedos están en las teclas correctas.
+Para esto solo debes preocuparte que tus dedos indices estén sobre las teclas
+`f` y `j`, la cuales, convenientemente tienen una pequeña marca para poder
+sentir que tus dedos están en las teclas correctas.
 
-Con esto las teclas más comunes estarán más cerca de nuestros dedos y las
-menos usadas, estén más lejos.
+Con esto las teclas más comunes estarán más cerca de nuestros dedos y las menos
+usadas, estén más lejos.
 
 Esta posición nos permitirá movernos con naturalidad usando:
 
@@ -168,8 +170,8 @@ Esta posición nos permitirá movernos con naturalidad usando:
 - `ñ` o `;` Para ir un caracter hacia la derecha
 
 Este movimiento te puede parecer poco intuitivo, e incluso puede que tengas
-dificultades recordando qué tecla sirve para moverse a la dirección que
-deseas, o al menos, así fue en mi caso.
+dificultades recordando qué tecla sirve para moverse a la dirección que deseas,
+o al menos, así fue en mi caso.
 
 Para practicar el movimiento, te recomiendo darte una vuelta por el juego
 [_Vim Adventures_](https://vim-adventures.com/), no toma más de 15 minutos en
@@ -191,8 +193,8 @@ movimiento.
   Para delimitar únicamente por espacios, se usa el **motion** `W` y `B`
 
 > Personalmente, creo que `$` y `0` están muy lejos de la posición natural de
-> mis dedos, por que en su lugar uso `L` y `H`, respectivamente. Veremos
-> _custom mappings_ en otro artículo.
+> mis dedos, por que en su lugar uso `L` y `H`, respectivamente. Veremos _custom
+> mappings_ en otro artículo.
 
 ### Movimiento vertical
 
@@ -205,10 +207,10 @@ Además de `j` y `k`, existen otros **motions** bastante útiles como:
 
 ## Conclusión
 
-Con esto sólo sabemos movernos en un archivo, si bien puede ser más rápido
-que usar el mouse para posicionar el cursor, no es muy emocionante. El
-verdadero poder de Vim se desata cuando usamos su lenguaje para hacer
-modificaciones de forma intuitiva.
+Con esto sólo sabemos movernos en un archivo, si bien puede ser más rápido que
+usar el mouse para posicionar el cursor, no es muy emocionante. El verdadero
+poder de Vim se desata cuando usamos su lenguaje para hacer modificaciones de
+forma intuitiva.
 
 En próximos _posts_ de esta serie de Vim, vamos a aprender **motions**,
 **operators**, **macros**, **plugins** y cómo usar las capacidades de VSCode
@@ -216,6 +218,7 @@ En próximos _posts_ de esta serie de Vim, vamos a aprender **motions**,
 
 ## Recursos Adicionales
 
-- Si escribes en tu terminal `vimtutor`, podrás acceder a un tutorial bastante completo donde aprenderás lo básico e incluso un poco más.
+- Si escribes en tu terminal `vimtutor`, podrás acceder a un tutorial bastante
+  completo donde aprenderás lo básico e incluso un poco más.
 - VSCode Vim [en github](https://github.com/VSCodeVim/Vim)
 - [Vim Cheat Sheet](https://vim.rtorr.com/)

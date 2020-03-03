@@ -13,14 +13,15 @@ tags:
   - functional
   - point-free
 socialImage: './images/banner.jpg'
-socialImageCredit: 'Foto por [Sarah Dorweiler](https://unsplash.com/photos/x2Tmfd1-SgA)'
+socialImageCredit:
+  'Foto por [Sarah Dorweiler](https://unsplash.com/photos/x2Tmfd1-SgA)'
 ---
 
-En este artículo quiero compartir dos métodos de _arrays_ que van a ayudarte
-a tener un código más ordenado y predecible.
+En este artículo quiero compartir dos métodos de _arrays_ que van a ayudarte a
+tener un código más ordenado y predecible.
 
-Me refiero a los métodos: `some` y `every`. Estos métodos fueron introducidos
-en `ES5` junto con los más populares `map`, `filter` y `reduce`.
+Me refiero a los métodos: `some` y `every`. Estos métodos fueron introducidos en
+`ES5` junto con los más populares `map`, `filter` y `reduce`.
 
 ## Some
 
