@@ -1,4 +1,9 @@
 {
   "javascript.validate.enable": false,
-  "jestrunner.configPath": "jest/jest-config.js"
+  "jestrunner.configPath": "jest/jest-config.js",
+  "cSpell.words": [
+    "sindresorhus",
+    "slufigy",
+    "tinify"
+  ]
 }

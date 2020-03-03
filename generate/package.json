@@ -1,0 +1,30 @@
+{
+  "name": "generate",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/inquirer": "^6.5.0",
+    "@types/open": "^6.2.1",
+    "@types/opn": "^5.5.0",
+    "@types/prettier": "^1.19.0",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.3"
+  },
+  "scripts": {
+    "start": "tsc && node dist/index.js",
+    "develop": "ts-node src/index.ts"
+  },
+  "dependencies": {
+    "@sindresorhus/slugify": "^0.11.0",
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "fake-useragent": "^1.0.1",
+    "inquirer": "^7.0.5",
+    "json-to-pretty-yaml": "^1.2.2",
+    "opn": "^6.0.0",
+    "ora": "^4.0.3",
+    "prettier": "^1.19.1",
+    "tinify": "^1.6.0-beta.2"
+  }
+}
