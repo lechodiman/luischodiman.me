@@ -1,4 +1,5 @@
 ---
+template: post
 title: 'Cómo ignorar archivos y carpetas en VSCode'
 slug: 'como-ignorar-archivos-y-carpetas-en-vs-code'
 draft: false
