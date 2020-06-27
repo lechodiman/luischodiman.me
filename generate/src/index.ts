@@ -56,6 +56,7 @@ async function generateBlogPost() {
   const socialImageCredit = await getPhotoCredit(unsplashPhotoId);
 
   const yaml: string = jsToYaml.stringify({
+    template: 'post',
     title,
     slug,
     draft,
