@@ -6,9 +6,30 @@
 
 ![Tests](https://github.com/lechodiman/luischodiman.me/workflows/Tests/badge.svg)
 
-This is a site built with [Gatsby.js](https://www.gatsbyjs.org/) using [gatsby-starter-lumen](https://github.com/alxshelepenok/gatsby-starter-lumen). To get started:
+This is a site built with [Gatsby.js](https://www.gatsbyjs.org/) using
+[gatsby-starter-lumen](https://github.com/alxshelepenok/gatsby-starter-lumen).
+To get started:
 
 ```bash
 yarn
 yarn develop
+```
+
+### Blog post generator
+
+To maintain the correct blog post structure across all posts I built a command
+line interface to automate the process.
+
+To build the package:
+
+```bash
+cd generate
+yarn build
+```
+
+To run the package:
+
+```
+cd ..
+node generate
 ```
