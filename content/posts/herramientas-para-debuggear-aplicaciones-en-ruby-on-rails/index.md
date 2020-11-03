@@ -18,6 +18,9 @@ socialImageCredit:
   'Foto por [Jordan M. Lomibao](https://unsplash.com/photos/j3dxI7CNYL0)'
 ---
 
+## Tabla de contenidos
+
+- [Tabla de contenidos](#tabla-de-contenidos)
 - [Rails console](#rails-console)
   - [Sandbox console](#sandbox-console)
   - [Búsqueda](#búsqueda)
@@ -49,7 +52,7 @@ disponibles en el ambiente de test.
 Existe un modo de la consola de Rails que nos permite jugar con los datos y
 modelos todo lo que queramos pero que al cerrar la sesión no se guarden los
 datos. Esto puede ser súper útil si estás en modo adrenalina y quieres debugger
-directo en producción. ⚰
+directo en producción. ☠
 
 ```bash
 rails c --sandbox
