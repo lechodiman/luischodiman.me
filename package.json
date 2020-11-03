@@ -4,7 +4,7 @@
   "description": "",
   "main": "n/a",
   "scripts": {
-    "develop": "yarn run clean && gatsby develop",
+    "start": "yarn run clean && gatsby develop",
     "build": "yarn run clean && gatsby build",
     "clean": "rimraf .cache public",
     "lint:js": "eslint --cache --ext .js,.jsx .",
